@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Albums</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-grid-list cols="4" rowHeight="1:1">
+  <ng-container *ngFor="let album of albums; let i=index;">
+    <mat-grid-tile>
+      <app-album-view [album]="album"></app-album-view>
+    </mat-grid-tile>
+  </ng-container>
+</mat-grid-list>

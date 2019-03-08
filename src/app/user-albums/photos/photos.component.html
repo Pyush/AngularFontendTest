@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Photos</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-grid-list cols="4" rowHeight="1:1">
+  <ng-container *ngFor="let photo of photos; let i=index;">
+    <mat-grid-tile>
+      <app-photo-view [photo]="photo"></app-photo-view>
+    </mat-grid-tile>
+  </ng-container>
+</mat-grid-list>

@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Users</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-grid-list cols="3" rowHeight="1:1">
+  <ng-container *ngFor="let user of users; let i=index;">
+    <mat-grid-tile>
+      <app-user [user]="user"></app-user>
+    </mat-grid-tile>
+  </ng-container>
+</mat-grid-list>
