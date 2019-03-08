@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HttpclientService} from '../services/httpclient.service';
 import {HttpResponse} from '@angular/common/http';
 import {ActivatedRoute, Router} from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-user-albums',
@@ -13,7 +14,12 @@ export class UserAlbumsComponent implements OnInit {
   userId: number;
   constructor(private route: ActivatedRoute,
               public router: Router,
+              private _location: Location,
               private httpclientService: HttpclientService) {
+  }
+
+  backClicked() {
+    this._location.back();
   }
 
   ngOnInit() {
