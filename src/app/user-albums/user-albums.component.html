@@ -7,10 +7,18 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<mat-grid-list cols="4" rowHeight="1:1">
+<div class="row">
+  <ng-container *ngFor="let album of albums; let i=index;">
+    <div class="column">
+      <app-album-view [album]="album"></app-album-view>
+    </div>
+  </ng-container>
+</div>
+
+<!--<mat-grid-list cols="4" rowHeight="1:1">
   <ng-container *ngFor="let album of albums; let i=index;">
     <mat-grid-tile>
       <app-album-view [album]="album"></app-album-view>
     </mat-grid-tile>
   </ng-container>
-</mat-grid-list>
+</mat-grid-list>-->

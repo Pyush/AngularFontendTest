@@ -1,13 +1,19 @@
 import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
-import {UsersComponent} from './users/users.component';
-import {UserAlbumsComponent} from './user-albums/user-albums.component';
-import {PhotosComponent} from './user-albums/photos/photos.component';
+import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
-  {path: '', component: UsersComponent},
-  {path: ':id/albums', component: UserAlbumsComponent},
-  {path: ':id/photos', component: PhotosComponent}
+  {
+    path: '',
+    loadChildren: () => import('./users/users.module').then(m => m.UsersModule)
+  },
+  {
+    path: ':id/albums',
+    loadChildren: () => import('./user-albums/user-albums.module').then(m => m.UserAlbumsModule)
+  },
+  {
+    path: ':id/photos',
+    loadChildren: () => import('./user-albums/photos/photos.module').then(m => m.PhotosModule)
+  }
 
 ];
 

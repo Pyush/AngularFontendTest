@@ -1,22 +1,30 @@
-<div class="margin-10">
-  <div class="card card-profile">
-    <div class="card-avatar">
-      <a>
-        <img style="height: 150px; " class="img" src="../../../assets/img/empty_user.jpg"/>
-      </a>
-    </div>
-    <div class="card-body">
-      <h4 class="card-title">{{user.name}}</h4>
-      <p><i class="material-icons" style="vertical-align: middle;">email</i>{{user.email}}</p>
-      <p class="card-description">
-        <i class="material-icons" style="vertical-align: middle;">
-          place
-        </i>
-        {{user?.address?.street}} + ',' + {{user?.address?.suite}} + {{user?.address?.city}} +
-        {{user?.address?.zipcode}}
-      </p>
-      <p><i class="material-icons" style="vertical-align: middle;">website</i><a href="{{user.website}}">{{user.website}}</a></p>
-      <a routerLink="{{user.id}}/albums" class="btn btn-primary btn-round">Album</a>
-    </div>
+<div class="card">
+  <img src="../../../assets/img/empty_user.jpg" alt="Jane" style="width:100%">
+  <div class="container">
+    <h2 class="text-singleline">{{user.name}}</h2>
+    <p class="title">CEO & Founder</p>
+    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+    <p><a href="{{user.email}}">{{user.email}}</a></p>
+    <p><a href="{{user.website}}">{{user.website}}</a></p>
+    <p><button class="button" routerLink="{{user.id}}/albums">Album</button></p>
+
+  <!--<div class="card-avatar">
+    <a>
+      <img style="height: 150px; " class="img" src="../../../assets/img/empty_user.jpg"/>
+    </a>
   </div>
+  <div class="card-body">
+    <h4 class="card-title">{{user.name}}</h4>
+    <p><i class="material-icons" style="vertical-align: middle;">email</i>{{user.email}}</p>
+    <p class="card-description">
+      <i class="material-icons" style="vertical-align: middle;">
+        place
+      </i>
+      {{user?.address?.street}} + ',' + {{user?.address?.suite}} + {{user?.address?.city}} +
+      {{user?.address?.zipcode}}
+    </p>
+    <p><i class="material-icons" style="vertical-align: middle;">website</i><a
+      href="{{user.website}}">{{user.website}}</a></p>
+    <a routerLink="{{user.id}}/albums" class="btn btn-primary btn-round">Album</a>
+  </div>-->
 </div>

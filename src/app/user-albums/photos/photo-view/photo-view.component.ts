@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-photo-view',
@@ -8,7 +7,9 @@ import {Location} from '@angular/common';
 })
 export class PhotoViewComponent implements OnInit {
   @Input() photo: any;
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

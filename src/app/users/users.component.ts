@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {HttpclientService} from '../services/httpclient.service';
+import {HttpclientService} from '../utilities/services/httpclient.service';
 import {HttpResponse} from '@angular/common/http';
 
 @Component({

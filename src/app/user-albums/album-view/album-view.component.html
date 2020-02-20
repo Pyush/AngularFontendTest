@@ -1,13 +1,8 @@
-<div class="margin-10">
-  <div class="card card-profile">
-    <div class="card-avatar">
-      <a>
-        <img style="height: 150px; " class="img" src="../../../assets/img/Pictures-Folder-Icon.png"/>
-      </a>
-    </div>
-    <div class="card-body">
-      <h4 class="card-title">{{album.title}}</h4>
-      <a (click)="gotoPhotos(album.id)" class="btn btn-primary btn-round">Photos</a>
-    </div>
+<div class="card">
+  <img style="width:100%" src="../../../assets/img/Pictures-Folder-Icon.png"/>
+  <div class="container">
+    <h4 class="text-singleline">{{album.title}}</h4>
+    <p><button class="button" (click)="gotoPhotos(album.id)">Photos</button></p>
   </div>
 </div>
+

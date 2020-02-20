@@ -4,10 +4,18 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<mat-grid-list cols="3" rowHeight="1:1">
+<div class="row">
+  <ng-container *ngFor="let user of users; let i=index;">
+    <div class="column">
+      <app-user [user]="user"></app-user>
+    </div>
+  </ng-container>
+</div>
+
+<!--<mat-grid-list cols="3" rowHeight="1:1">
   <ng-container *ngFor="let user of users; let i=index;">
     <mat-grid-tile>
       <app-user [user]="user"></app-user>
     </mat-grid-tile>
   </ng-container>
-</mat-grid-list>
+</mat-grid-list>-->
